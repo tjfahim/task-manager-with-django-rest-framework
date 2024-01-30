@@ -1,5 +1,5 @@
 """
-URL configuration for task_manager project.
+URL configuration for mydrfproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -14,16 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
-
 from django.contrib import admin
-from django.urls import path, include 
-from .views import register_page ,login_page
-
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('accounts.urls')),
-    path('login_page/', login_page, name='login_page'),
-    path('register_page/', register_page, name='register_page'),
 ]
